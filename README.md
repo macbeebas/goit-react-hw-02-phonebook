@@ -1,6 +1,4 @@
-**Read in other languages: [angielski](README.en.md), [rosyjski](README.md).**
-
-** Read in other languages: [angielski](README.en.md), [rosyjski](README.ru.md) **
+**Read in other languages: [angielski](README.en.md), [rosyjski](README.ru.md).**
 
 Kurs GoIT - Moduł React - HomeWork #02 - komponent "Phonebook"
 
@@ -30,11 +28,14 @@ przycisk `"Create repository from template"`.
 
 ![Creating repo from a template step 2](./assets/template-step-2.png)
 
-Po utworzeniu repozytorium, należy przejść do jego ustawień w zakładce `Settings` > `Actions` > `General`, jak pokazano na rysunku.
+Po utworzeniu repozytorium, należy przejść do jego ustawień w zakładce
+`Settings` > `Actions` > `General`, jak pokazano na rysunku.
 
 ![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
 
-Przescrolluj stronę do samego końca, w sekcji `«Workflow permissions»` wybierz opcję `«Read and write permissions»` i zaznacz pole w checkboksie. Jest to niezbędne do automatyzacji procesu deploymentu projektu.
+Przescrolluj stronę do samego końca, w sekcji `«Workflow permissions»` wybierz
+opcję `«Read and write permissions»` i zaznacz pole w checkboksie. Jest to
+niezbędne do automatyzacji procesu deploymentu projektu.
 
 ![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
 
