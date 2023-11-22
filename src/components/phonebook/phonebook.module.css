@@ -1,4 +1,15 @@
 :root {
   /* variables */
-  --global-ratio: 1em; /* 1em = 32px */
+  --global-ratio: 1em;
+  /* 1em = 32px */
+}
+
+.formContainer {
+  outline: 5px solid green;
+  display: flex;
+}
+
+.formMain {
+  outline: 5px solid red;
+  flex-direction: column;
 }

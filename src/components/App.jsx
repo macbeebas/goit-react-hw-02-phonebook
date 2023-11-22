@@ -33,17 +33,19 @@ class App extends Component {
     console.log(this.state.contacts[0].name);
 
     return (
-      <>
-        {<p>TEST</p>}
-        <Section title="Phonebook">
-          <Phonebook />
-          {/* <Phonebook onSubmit={this.addContact} /> */}
-        </Section>
-        <Section title="Contacts">
-          <ContactsList contacts={this.state.contacts} />
-        </Section>
-        {/* <NotificationContainer /> */}
-      </>
+      <div className="container">
+        <div className="components-list">
+          {<p>TEST2</p>}
+          <Section title="Phonebook">
+            <Phonebook />
+            {/* <Phonebook onSubmit={this.addContact} /> */}
+          </Section>
+          <Section title="Contacts">
+            <ContactsList contacts={this.state.contacts} />
+          </Section>
+          {/* <NotificationContainer /> */}
+        </div>
+      </div>
     );
   }
 }

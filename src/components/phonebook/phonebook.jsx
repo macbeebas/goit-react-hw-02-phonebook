@@ -23,10 +23,10 @@ export class Phonebook extends Component {
 
   render() {
     return (
-      <div>
+      <div className={css.formContainer}>
         {/* <form className={css.form} onSubmit={this.handleSubmit}> */}
-        <form className={css.form} onSubmit={this.handleSubmit}>
-          <label className={css.label}>
+        <form className={css.formMain} onSubmit={this.handleSubmit}>
+          <label className="label">
             Name
             <input
               type="text"
