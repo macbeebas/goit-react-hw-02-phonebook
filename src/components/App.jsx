@@ -9,8 +9,8 @@ import { Phonebook } from './phonebook/phonebook'; // phonebook.jsx
 class App extends Component {
   state = {
     contacts: [
-      { id: 'id-1', name: 'John Doe' },
-      { id: 'id-2', name: 'Bob Bobber' },
+      { id: 'id-1', name: 'John Doe', number: '123-456-789' },
+      { id: 'id-2', name: 'Bob Bobber', number: '234-567-890' },
       // { id: 'id-3', name: 'Olivia Anderson' },
       // { id: 'id-4', name: 'Ethan Mitchell' },
       // { id: 'id-5', name: 'Ava Thompson' },
@@ -20,15 +20,16 @@ class App extends Component {
     name: '',
   };
 
-  addContact = ({ name }) => {
+  addContact = ({ name, number }) => {
     const contact = {
       id: nanoid(),
       name,
+      number,
     };
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
     }));
-    Notify.success(`Contact ${name} added successfully`);
+    Notify.success(`Contact ${name}: ${number} added successfully`);
   };
 
   render() {
