@@ -15,6 +15,10 @@ export class Phonebook extends Component {
     name: '',
   };
 
+  handleChangeName = e => {
+    this.setState({ name: e.currentTarget.value });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit({ ...this.state });
@@ -24,13 +28,14 @@ export class Phonebook extends Component {
   render() {
     return (
       <div className={css.formContainer}>
-        {/* <form className={css.form} onSubmit={this.handleSubmit}> */}
         <form className={css.formMain} onSubmit={this.handleSubmit}>
-          <label className="label">
-            Name
+          <label className={css.formLabel}>
+            <p>Name</p>
             <input
               type="text"
               name="name"
+              value={this.state.name}
+              onChange={this.handleChangeName}
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan."
               required

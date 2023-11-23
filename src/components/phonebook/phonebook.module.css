@@ -5,11 +5,25 @@
 }
 
 .formContainer {
-  outline: 5px solid green;
   display: flex;
 }
 
 .formMain {
-  outline: 5px solid red;
+  display: flex;
   flex-direction: column;
+  padding: 5px;
+}
+
+.formLabel {
+  padding: 5px;
+}
+
+.formLabel > p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.buttonAdd {
+  margin: 5px auto 5px 5px;
+  padding: 5px;
 }

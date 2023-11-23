@@ -3,10 +3,10 @@ import css from '../contactslist/contactslist.module.css';
 import PropTypes from 'prop-types';
 
 export const ContactsList = ({ contacts }) => (
-  <ul className={css.listWrapper}>
+  <ul className={css.contactList}>
     {contacts.map(({ id, name }) => (
       <li key={id} className={css.contactItem}>
-        <p className={css.name}>{name}:</p>
+        <p className={css.contactName}>{name}</p>
       </li>
     ))}
   </ul>
