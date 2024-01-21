@@ -1,6 +1,6 @@
-**Read in other languages: [angielski](README.en.md), [rosyjski](README.ru.md).**
+**Read in English: [angielski](README.en.md)**
 
-Kurs GoIT - Moduł React - HomeWork #02 - komponent "Phonebook"
+Kurs GoIT - Moduł 'React' - HomeWork #02 - komponent "Phonebook"
 
 Link: https://macbeebas.github.io/goit-react-hw-02-phonebook/
 

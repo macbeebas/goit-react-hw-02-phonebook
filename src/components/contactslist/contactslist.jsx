@@ -1,11 +1,11 @@
 import React from 'react';
-import css from '../contactslist/contactslist.module.css';
+import css from './ContactsList.module.css';
 import PropTypes from 'prop-types';
 
 export const ContactsList = ({ contacts }) => (
-  <ul className={css.contactList}>
+  <ul>
     {contacts.map(({ id, name, number }) => (
-      <li key={id} className={css.contactItem}>
+      <li key={id}>
         <p className={css.contactName}>
           {name}: {number}
         </p>

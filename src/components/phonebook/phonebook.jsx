@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-// import { nanoid } from 'nanoid';
-
-// import { Section } from '../section/section'; // section.jsx
-// import { Filter } from '../filter/filter'; // filter.jsx
-// import { ContactList } from '../contactslist/contactslist'; // contactslist.jsx
-
-import css from './phonebook.module.css';
-
+import css from './Phonebook.module.css';
 import PropTypes from 'prop-types';
 
 export class Phonebook extends Component {

@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Section } from './section/section';
-// import { Filter } from './filter/filter';
-import { ContactsList } from './contactslist/contactslist.jsx';
-import { Phonebook } from './phonebook/phonebook'; // phonebook.jsx
+import { Section } from './Section/Section';
+import { Filter } from './Filter/Filter';
+import { ContactsList } from './ContactsList/ContactsList.jsx';
+import { Phonebook } from './Phonebook/Phonebook'; // Phonebook.jsx
 
 class App extends Component {
   state = {
     contacts: [
-      { id: 'id-1', name: 'John Doe', number: '123-456-789' },
-      { id: 'id-2', name: 'Bob Bobber', number: '234-567-890' },
-      // { id: 'id-3', name: 'Olivia Anderson' },
-      // { id: 'id-4', name: 'Ethan Mitchell' },
-      // { id: 'id-5', name: 'Ava Thompson' },
-      // { id: 'id-6', name: 'Noah Parker' },
-      // { id: 'id-7', name: 'Sophia Reynolds' },
+      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
+      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
+      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
+    filter: '',
     name: '',
+    number: '',
   };
 
   addContact = ({ name, number }) => {
@@ -32,16 +31,27 @@ class App extends Component {
     Notify.success(`Contact ${name}: ${number} added successfully`);
   };
 
+  changeFilter = e => {
+    this.setState({ filter: e.currentTarget.value });
+  };
+
+  showContacts = () => {
+    return this.state.contacts.filter(c =>
+      c.name.toLowerCase().includes(this.state.filter.toLowerCase())
+    );
+  };
+
   render() {
     return (
       <div className="container">
         <div className="components-list">
-          {<p>TEST2</p>}
+          <p>STEP#3</p>
           <Section title="Phonebook">
             <Phonebook onSubmit={this.addContact} />
           </Section>
           <Section title="Contacts">
-            <ContactsList contacts={this.state.contacts} />
+            <Filter value={this.state.filter} onChange={this.changeFilter} />
+            <ContactsList contacts={this.showContacts()} />
           </Section>
         </div>
       </div>

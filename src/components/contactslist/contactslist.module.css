@@ -4,15 +4,6 @@
   /* 1em = 32px */
 }
 
-.contactList {
-  /* outline: 3px solid green; */
-}
-
-.contactItem {
-  /* outline: 3px solid red; */
-}
-
 .contactName {
-  /* border: 3px solid blue; */
   margin: 0;
 }
