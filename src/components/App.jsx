@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Section } from '../Section/Section.jsx';
-import { Filter } from './Filter/Filter.jsx';
-import { ContactsList } from './ContactsList/ContactsList.jsx';
-import { Phonebook } from './Phonebook/Phonebook.jsx'; // Phonebook.jsx
+import { Section } from './Section/Section';
+import { Filter } from './Filter/Filter';
+import { ContactsList } from './ContactsList/ContactsList';
+import { Phonebook } from './Phonebook/Phonebook';
 
 class App extends Component {
   state = {
