@@ -15,8 +15,6 @@ class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    name: '',
-    number: '',
   };
 
   addContact = ({ name, number }) => {
@@ -45,7 +43,7 @@ class App extends Component {
     return (
       <div className="container">
         <div className="components-list">
-          <p>STEP#3</p>
+          <p>STEP#4</p>
           <Section title="Phonebook">
             <Phonebook onSubmit={this.addContact} />
           </Section>
