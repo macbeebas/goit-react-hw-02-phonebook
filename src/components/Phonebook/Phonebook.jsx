@@ -30,6 +30,7 @@ export class Phonebook extends Component {
           <label className={css.formLabel}>
             <p>Name</p>
             <input
+              className={css.formInput}
               type="text"
               name="name"
               value={this.state.name}
@@ -42,6 +43,7 @@ export class Phonebook extends Component {
           <label className={css.formLabel}>
             <p>Number</p>
             <input
+              className={css.formInput}
               type="text"
               name="number"
               value={this.state.number}

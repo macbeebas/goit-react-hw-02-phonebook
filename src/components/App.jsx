@@ -38,6 +38,13 @@ class App extends Component {
     Notify.success(`Contact ${name}: ${number} added successfully`);
   };
 
+  delContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+    Notify.success('Contact has been deleted');
+  };
+
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
   };
@@ -52,13 +59,16 @@ class App extends Component {
     return (
       <div className="container">
         <div className="components-list">
-          <p>STEP#5</p>
+          <p>STEP#6</p>
           <Section title="Phonebook">
             <Phonebook onSubmit={this.addContact} />
           </Section>
           <Section title="Contacts">
             <Filter value={this.state.filter} onChange={this.changeFilter} />
-            <ContactsList contacts={this.showContacts()} />
+            <ContactsList
+              contacts={this.showContacts()}
+              onDelContact={this.delContact}
+            />
           </Section>
         </div>
       </div>
