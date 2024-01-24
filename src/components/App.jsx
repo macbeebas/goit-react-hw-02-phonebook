@@ -23,6 +23,15 @@ class App extends Component {
       name,
       number,
     };
+
+    const nameChecker = this.state.contacts.find(
+      contact => contact.name === name
+    );
+    if (nameChecker) {
+      Notify.warning(`Contact ${name} is already in contacts`);
+      return;
+    }
+
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
     }));
@@ -43,7 +52,7 @@ class App extends Component {
     return (
       <div className="container">
         <div className="components-list">
-          <p>STEP#4</p>
+          <p>STEP#5</p>
           <Section title="Phonebook">
             <Phonebook onSubmit={this.addContact} />
           </Section>
